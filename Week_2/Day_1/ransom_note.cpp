@@ -31,12 +31,10 @@ bool canConstruct(string ransomNote, string magazine)
     for(int i = 0; i < ransomNote.size(); i++)
     {
         freq[ransomNote[i] - 'a']--;
-
         //if character unavailable
         if(freq[ransomNote[i] - 'a'] < 0)
             return false;
     }
-
     return true;
 }
 
@@ -44,8 +42,6 @@ int main()
 {
     string ransomNote = "aa";
     string magazine = "aab";
-
     cout << (canConstruct(ransomNote, magazine) ? "true" : "false");
-
     return 0;
 }
